@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script type="text/javascript" src="../js/posts.js"></script>
+        <script type="text/javascript" src="../js/commenti.js"></script>
+    </head>
+    <body style="width: 500px; margin: auto">
+        <div class="page-header">
+            <h1>Microblog <small>by Brazzarola</small></h1>
+        </div>
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="index.html">Home</a></li>
+            <li role="presentation"><a href="azioni.html">Azioni</a></li>
+        </ul>
+        <h3>Azioni</h3>
+        <br>
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                    <h4 class="mb-1">Crea Post</h4>
+                </div>
+                <div class="form-group">
+                    <label for="titolo">Titolo:</label>
+                    <input style="width: 300px" type="text" class="form-control" id="titoloP" placeholder="Titolo">
+                </div>
+                <div class="form-group">
+                    <label for="autore">Autore:</label>
+                    <input style="width: 300px" type="text" class="form-control" id="autoreP" placeholder="Autore">
+                </div>
+                <div class="form-group">
+                    <label for="contenuto">Contenuto:</label>
+                    <input style="width: 300px" type="text" class="form-control" id="contenutoP" placeholder="Contenuto">
+                </div>
+                <div class="form-group">
+                    <label for="dataOra">DataOra:</label>
+                    <input style="width: 300px" type="text" class="form-control" id="dataOraP" placeholder="DataOra">
+                </div>
+                <button type="submit" class="btn btn-default" onClick="postPost('http://localhost:8080/Restful/rest/posts')">Submit</button>
+                <br>
+                <div id="esitoP"></div>
+            </a>
+            <br>
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                    <h4 class="mb-1">Commenta</h4>
+                </div>
+                <div class="form-group">
+                    <label for="autore">Autore:</label>
+                    <input style="width: 300px" type="text" class="form-control" id="autoreC" placeholder="Autore">
+                </div>
+                <div class="form-group">
+                    <label for="contenuto">Contenuto:</label>
+                    <input style="width: 300px" type="text" class="form-control" id="contenutoC" placeholder="Contenuto">
+                </div>
+                <div class="form-group">
+                    <label for="dataOra">DataOra:</label>
+                    <input style="width: 300px" type="text" class="form-control" id="dataOraC" placeholder="DataOra">
+                </div>
+                <button type="submit" class="btn btn-default" onClick="postCommento('http://localhost:8080/Restful/rest/commenti')">Submit</button>
+                <br>
+                <div id="esitoC"></div>
+            </a>
+        </div>
+    </body>
+</html>

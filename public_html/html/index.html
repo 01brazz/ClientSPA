@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Microblog Brazzarola</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script type="text/javascript" src="../js/posts.js"></script>
+        <script type="text/javascript" src="../js/commenti.js"></script>
+    </head>
+    <body style="width: 500px; margin: auto">
+        <div class="page-header">
+            <h1>Microblog <small>by Brazzarola</small></h1>
+        </div>
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="index.html">Home</a></li>
+            <li role="presentation"><a href="azioni.html">Azioni</a></li>
+        </ul>
+        <h3>Home</h3>
+        <br>
+
+        <button type="submit" class="btn btn-default" onClick="showList('http://localhost:8080/Restful/rest/posts')">Visualizza Posts</button>
+        <br><br>
+        <p>Json grezzo (Post):</p>
+        <div id="postsGrezzi"></div>
+        <br>
+        <p>Post formattati:</p>
+        <div id="postsFormattati"></div>
+        <div id="doingP"></div>
+
+        <hr>
+        <label for="idPost">IdPost:</label>
+        <input style="width: 300px" type="text" class="form-control" id="idPost" placeholder="IdPost">
+        <br>
+        <button type="submit" class="btn btn-default" onClick="showSingle('http://localhost:8080/Restful/rest/posts/')">Visualizza Post</button>
+        <br><br>
+        <p>Json grezzo (Post):</p>
+        <div id="postGrezzo"></div>
+        <br>
+        <p>Post formattato:</p>
+        <div id="postFormattato"></div>
+        <div id="doingPS"></div>
+
+        <hr>
+        <button type="submit" class="btn btn-default" onClick="showList2('http://localhost:8080/Restful/rest/commenti')">Visualizza Commenti</button>
+        <br><br>
+        <p>Json grezzo (Commenti):</p>
+        <div id="commentiGrezzi"></div>
+        <br>
+        <p>Commenti formattati:</p>
+        <div id="commentiFormattati"></div>
+        <div id="doingC"></div>
+
+        <hr>
+        <label for="idCommento">IdCommento:</label>
+        <input style="width: 300px" type="text" class="form-control" id="idCommento" placeholder="IdCommento">
+        <br>
+        <button type="submit" class="btn btn-default" onClick="showSingle2('http://localhost:8080/Restful/rest/commenti/')">Visualizza Commento</button>
+        <br><br>
+        <p>Json grezzo (Commento):</p>
+        <div id="commentoGrezzo"></div>
+        <br>
+        <p>Commento formattato:</p>
+        <div id="commentoFormattato"></div>
+        <div id="doingCS"></div>
+    </body>
+</html>
